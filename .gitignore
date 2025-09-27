@@ -22,3 +22,8 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Ignore files added by users
+package.json
+tsconfig.json
+yarn.lock

@@ -1,5 +1,5 @@
 ---
-
+const pageTitle = "Astro";
 ---
 
 <html lang="en">
@@ -8,7 +8,7 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
 		<a href="/">Home</a>
@@ -16,7 +16,7 @@
 		<a href="/blog">Blog</a>
 		<a href="https://gitee.com/RingKenga/astro-tutorial" target="_blank">Gitee</a>
 		<a href="https://github.com/kengatong/astor-tutorial" target="_blank">Github</a>
-		<h1>我的 Astro 站点</h1>
+		<h1>我的 {pageTitle} 站点</h1>
 		<h2>Hello world!</h2>
 	</body>
 </html>

@@ -1,5 +1,7 @@
 ---
 import { literal } from "astro:schema";
+import '../styles/global.css';
+import '../styles/reset.css';
 
 const pageTitle = "关于我";
 
@@ -16,6 +18,12 @@ const skills = ["HTML", "CSS", "JavaScript", "C", "C++", "Java", "Python", "PHP"
 const happy = true;
 const finished = false;
 const goal = 3;
+
+//  CSS变量
+const skillColor = "navy";
+const fontWeight = "bold";
+const textCase = "uppercase";
+
 ---
 
 <html lang="en">
@@ -26,6 +34,17 @@ const goal = 3;
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
 	</head>
+    <style define:vars={{skillColor, fontWeight, textCase}}>
+        h1 {
+            color: purple;
+            font-size: 4rem;
+        }
+        .skill {
+            color: var(--skillColor);
+            font-weight: var(--fontWeight);
+            text-transform: var(--textCase);
+        }
+    </style>
 	<body>
         <a href="/">Home</a>
         <a href="/about">关于</a>
@@ -45,7 +64,7 @@ const goal = 3;
         </ul>
         <p>我的技能是：</p>
         <ul>
-            {skills.map((skill) => <li>{skill}</li>)}
+            {skills.map((skill) => <li class="skill">{skill}</li>)}
         </ul>
         {happy && <p>我非常乐意学习 Astro!</p>}
         {finished && <p>我完成了这节教程！</p>}

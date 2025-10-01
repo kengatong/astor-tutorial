@@ -1,7 +1,8 @@
 ---
+layout: ../../layouts/MarkdownLayout.astro
 title: 我的第二篇博客文章
-author: Kenga
 description: "学习了一些 Astro 后，我根本停不下来！"
+author: 'Kenga'
 image:
     url: "https://docs.astro.build/assets/arc.webp"
     alt: "The Astro logo on a dark background with a purple gradient arc."
